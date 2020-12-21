@@ -1,6 +1,6 @@
 # nuneaton-lax
 
-this repo is for nuneaton lacrosse's 11ty site
+this repo is for HallX 11ty site
 
 > Created by Jack Miller
 
