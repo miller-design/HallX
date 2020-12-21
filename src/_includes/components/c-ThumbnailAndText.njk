@@ -1,0 +1,10 @@
+<section class="[ c-ThumbnailAndText ]">
+  <div class="[ c-ThumbnailAndText__inner ]">
+    {%- for item in ThumbnailAndTextArray -%}
+      <div class="[ c-ThumbnailAndText__cell ]">
+        <img src="/img/{{ item.Image }}" srcset="/img/{{ item.Image }}" class="[ c-ThumbnailAndText__image ]" alt="{{ item.ImageAlt }}">
+				<h1 class="[ c-ThumbnailAndText__header ]">{{ item.Header }}</h1>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>

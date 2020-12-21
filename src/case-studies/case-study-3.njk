@@ -1,0 +1,66 @@
+---
+title: "Case Study Name"
+shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia."
+featuredImage: "slider-test.jpg"
+featuredImageAlt: "Alt text is here"
+HeroImage: hero-example.jpg
+HeroImageAlt: HeroImageAlt
+HeroSubHeader: Sub Header
+HeroHeader: Your logistical needs made reality
+DownloadCaseStudy: #
+resultArray:
+  -
+    Icon: bars.svg
+    Text: Results up 15%
+  -
+    Icon: interactive.svg
+    Text: Interactions up 15%
+  -
+    Icon: conversion.svg
+    Text: Conversions up 4%
+---
+
+{% set TextBlockHeader = 'An Overview' %}
+{% set TextBlockHeaderType = 'h2' %}
+{% set TextBlockCopy %}
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat tempor blandit. Fusce eget dui dolor. 
+	Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien faucibus volutpat. Phasellus cursus posuere 
+	ante sed ullamcorper. Integer sit amet tortor erat. Vivamus sagittis congue dolor, sit amet eleifend libero eleifend 
+	sed. Nunc ut urna commodo, consectetur dui eget, laoreet purus. Integer erat enim, cursus id tempor ac, iaculis eu est. 
+	Nulla justo metus, porta vel augue quis, faucibus gravida sem. Aliquam aliquam neque et commodo consectetur. Vivamus 
+	fringilla mi sapien, non fermentum massa auctor sit amet.
+	<br/>
+	<br/>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat tempor blandit. Fusce eget dui dolor. 
+	Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien faucibus volutpat. Phasellus cursus posuere 
+	ante sed ullamcorper. Integer sit amet tortor erat. Vivamus sagittis congue dolor.
+{% endset %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}
+
+{% set TextBlockHeader = 'Our Approach' %}
+{% set TextBlockHeaderType = 'h2'%}
+{% set TextBlockCopy %}
+	<strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Suspendisse feugiat tempor blandit. 
+	Fusce eget dui dolor. Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien faucibus volutpat. 
+	Phasellus cursus posuere ante sed ullamcorper. Integer sit amet tortor erat. Vivamus sagittis congue dolor, sit
+	<br/>
+	<br/>
+	<strong>amet eleifend libero</strong> eleifend sed. Nunc ut urna commodo, consectetur dui eget, laoreet purus. Integer erat enim, 
+	cursus id tempor ac, iaculis eu est. Nulla justo metus, porta vel augue quis, faucibus gravida sem. Aliquam aliquam 
+	neque et commodo consectetur. Vivamus fringilla mi sapien, non fermentum massa auctor sit amet.
+{% endset %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}
+
+{% set TextBlockHeader = 'Conclusion '%}
+{% set TextBlockHeaderType = 'h3'%}
+{% set TextBlockCopy %}
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat tempor blandit. Fusce eget dui dolor. 
+	Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien faucibus volutpat. Phasellus cursus posuere ante 
+	sed ullamcorper. Integer sit amet tortor erat. Vivamus sagittis congue dolor.
+{% endset %}
+{% set TextBlockHeaderLinkUrl = '#' %}
+{% set TextBlockHeaderLinkText = 'Contact Us' %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}

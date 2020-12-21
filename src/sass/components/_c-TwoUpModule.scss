@@ -1,0 +1,97 @@
+/* Two Up Module */
+
+/* blocks */
+.c-TwoUpModule {
+	width: 100%;
+	position: relative;
+
+	@include scale-property(margin-bottom, 120px, 240px);
+}
+
+.c-TwoUpModule__inner {
+
+	@include container;
+}
+
+.c-TwoUpModule__left {
+	display: flex;
+	flex-wrap: wrap;
+	
+	@include col-width(1, -1);
+
+	@include media("<medium") {
+		margin-bottom: 80px;
+	}
+
+	@include media(">=medium") {
+		flex-direction: column;
+		justify-content: space-between;
+		padding-right: 20px;
+
+		@include col-width(2, 7);
+	}
+
+	.c-TwoUpModule__text-block {
+		display: block;
+		
+		@include scale-property(margin-bottom, 50px, 180px);
+	}
+}
+
+.c-TwoUpModule__right  {
+	display: flex;
+	flex-wrap: wrap;
+	
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+		padding-left: 20px;
+	}
+
+	
+	.c-TwoUpModule__text-block {
+
+		@include media("<medium") {
+			margin-bottom: 80px;
+		}
+	}
+
+	@include media(">=medium") {
+		flex-direction: column-reverse;
+		justify-content: space-between;
+
+		@include col-width(7, 13);
+	}
+}
+
+/* elements */
+.c-TwoUpModule__text-block {
+	width: 90%;
+
+	@include media(">=medium") {
+		width: 80%;
+	}
+}
+
+.c-TwoUpModule__header {
+	
+	@include roboto-bold-35-18;
+	@include scale-property(margin-bottom, 15px, 30px)
+}
+
+.c-TwoUpModule__text {
+	
+	@include roboto-regular-18-16;
+	@include scale-property(margin-bottom, 10px, 20px)
+}
+
+.c-TwoUpModule__link {
+
+	@include inline-link;
+	@include roboto-regular-16;
+}
+
+.c-TwoUpModule__img {
+	width: 100%;
+}
+

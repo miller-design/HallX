@@ -1,0 +1,242 @@
+// Menu Styles
+
+// Blocks
+.c-Menu {
+	pointer-events: auto;
+	max-width: 600px;
+	width: 100%;
+	height: 100%;
+	background-color: $c-white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-level-three;
+	transform: translate3d(-600px, 0, 0);
+	transition: 400ms transform $t-standard-curve-alt;
+
+	&.is-active {
+		transform: translate3d(0, 0, 0);
+
+		.c-Menu__inner {
+			opacity: 1;
+			@include scale-property(padding-left, 20px, 40px);
+		}
+	}
+}
+
+.c-Menu__inner {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	height: 100%;
+	opacity: 0;
+	transition:
+		300ms opacity 300ms $t-standard-curve-alt,
+		400ms padding 300ms $t-standard-curve-alt;
+
+	@include scale-property(padding-top, 140px, 200px);
+	@include scale-property(padding-right, 20px, 40px);
+	@include scale-property(padding-bottom, 30px, 70px);
+	@include scale-property(padding-left, 10px, 20px);
+}
+
+//elements
+.c-Menu__trigger {
+	width: 20px;
+	height: 12px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: $z-level-four;
+	transition: 400ms opacity $t-standard-curve-alt;
+	pointer-events: auto;
+
+	@include scale-property(margin-right, 20px, 40px);
+
+	@include media("<small") {
+		top: 10px;
+	}
+
+	@media (hover: hover) {
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&.is-active {
+
+		.c-Menu__trigger-row {
+			transition:
+				200ms transform 200ms $t-standard-curve-alt,
+				200ms top $t-standard-curve-alt;
+		}
+
+		.c-Menu__trigger-row:first-of-type {
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
+		}
+
+		.c-Menu__trigger-row:last-of-type {
+			top: 50%;
+			transform: translateY(-50%) rotate(45deg);
+		}
+	}
+}
+
+.c-Menu__trigger-row {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: $c-black;
+	transition:
+		200ms transform $t-standard-curve-alt,
+		200ms top 200ms $t-standard-curve-alt;
+	transform-origin: center, center;
+	transform: translateY(-50%);
+
+	&.c-Menu__trigger-row:first-of-type {
+		top: 1px;
+	}
+
+	&.c-Menu__trigger-row:last-of-type {
+		top: 11px;
+	}
+}
+
+.c-Menu__col {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: space-between;
+	height: 100%;
+}
+
+.c-Menu__nav {
+	width: 100%;
+
+	@include scale-property(padding-bottom, 90px, 180px);
+
+	.c-Menu__list {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.c-Menu__nav-item  {
+		width: 100%;
+		text-align: left;
+
+		@include scale-property(margin-bottom, 15px, 14px);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.c-Menu__link {
+		color: $c-black;
+		text-decoration: none;
+		text-transform: capitalize;
+		transition: opacity 200ms $t-standard-curve-alt;
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		@include roboto-bold-42-20;
+
+		@media(hover: hover) {
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+
+		&.is-active {
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: $c-blue;
+			}
+		}
+	}
+}
+
+.c-Menu__additional-info {
+	width: 100%;
+	display: block;
+}
+
+.c-Menu__contact-wrap {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $c-grey;
+
+	.c-Menu__email,
+	.c-Menu__phone {
+		color: $c-black;
+
+		@include roboto-regular-18-16;
+
+		> a {
+			color: $c-black;
+			text-decoration: none;
+			transition: 300ms opacity $t-standard-curve-alt;
+
+			@media (hover: hover) {
+
+				&:hover {
+					opacity: 0.4;
+				}
+			}
+		}
+	}
+
+	.c-Menu__email {
+		margin-bottom: 12px;
+	}
+}
+
+.c-Menu__list {
+	margin-bottom: 0;
+	margin-top: 0;
+	display: flex;
+	align-items: center;
+
+	> li {
+		
+		@include scale-property(margin-right, 20px, 30px);
+	}
+
+	> li > a {
+		transition: 300ms opacity $t-standard-curve-alt;
+		display: inline-flex;
+
+		svg {
+			max-width: 25px;
+			max-height: 25px;
+			width: 100%;
+			height: 100%;
+			fill: $c-blue	;
+		}
+
+		@media (hover: hover) {
+
+			&:hover {
+				opacity: 0.4;
+			}
+		}
+	}
+}
+
+// modifiers

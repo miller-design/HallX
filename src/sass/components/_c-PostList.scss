@@ -1,0 +1,122 @@
+// Post List Styles
+
+// Blocks
+.c-PostList {
+	width: 100%;
+	position: relative;
+
+	@include scale-property(margin-bottom, 120px, 240px);
+}
+
+.c-PostList__grid {
+	width: 100%;
+	
+	@include container;
+}
+
+.c-PostList__item {
+
+	@include col-width(1, -1);
+	@include scale-property(margin-bottom, 40px, 70px);
+
+	@include media(">=small") {
+
+		@include col-width(span, 3);
+	}
+
+	@include media(">=medium") {
+
+		@include col-width(span, 4);
+	}
+
+	@media (hover: hover) {
+
+		&:hover {
+
+			.c-PostList__image {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+/* Elements */
+.c-PostList__item-inner {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+	> a {
+		text-decoration: none;
+	}
+}
+
+.c-PostList__image-wrap {
+	overflow: hidden;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+
+	@include media(">=medium") {
+		margin-bottom: 40px;
+	}
+}
+
+.c-PostList__image {
+	width: 100%;
+	display: flex;
+	transform: scale(1.02);
+	transform-origin: center center;
+	transition: 600ms transform $t-standard-curve-alt;
+}
+
+.c-PostList__header {
+	text-decoration: none;
+	color: $c-black;
+
+	@include roboto-bold-35-18;
+	@include scale-property(margin-bottom, 8px, 10px);
+}
+
+.c-PostList__intro {
+	text-decoration: none;
+	color: $c-black;
+
+	@include roboto-regular-16;
+	@include scale-property(margin-bottom, 15px, 25px);
+}
+
+.c-PostList__link {
+
+	@include inline-link;
+	@include roboto-regular-16;
+}
+
+
+/* Modifiers */
+.c-PostList--wide-view {
+
+	.c-PostList__grid {
+		justify-content: space-between;
+	}
+
+	.c-PostList__item {
+
+		@include scale-property(margin-bottom, 50px, 100px);
+
+		@include media(">=small") {
+
+			@include col-width(span, 3);
+		}
+	
+		@include media(">=medium") {
+	
+			@include col-width(2, span 4);
+
+			&:nth-of-type(even) {
+
+				@include col-width(8, span 4);
+			}
+		}
+	}
+}

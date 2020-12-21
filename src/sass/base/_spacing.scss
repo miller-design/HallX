@@ -1,0 +1,19 @@
+// Spacing styles
+
+// spacing margin
+.mb-80-150 {
+	@include scale-property(margin-bottom, 80px, 150px);
+}
+
+.mb-50-120 {
+	@include scale-property(margin-bottom, 50px, 120px);
+}
+
+.mb-25-70 {
+	@include scale-property(margin-bottom, 25px, 70px);
+}
+
+// spacing paddding
+.pb-25-50 {
+	@include scale-property(padding-bottom, 25px, 50px);
+}

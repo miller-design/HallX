@@ -1,0 +1,19 @@
+<section class="[ c-Hero ]">
+	<div class="[ c-Hero__inner ]">
+		<div class="[ c-Hero__img ]">
+			<img src="/img/{{ HeroImage }}" srcset="/img/{{ HeroImage }}" class="[ c-Hero__image ]" alt="{{ HeroImageAlt }}">
+			<span class="[ c-Hero__overlay ]"></span>
+		</div>
+		
+		<div class="[ c-Hero__content-wrap ]">
+			<div class="[ c-Hero__content ]">
+				<h1 class="[ c-Hero__subheader ]">{{ HeroSubHeader }}</h1>
+				<h2 class="[ c-Hero__header ]">{{ HeroHeader }}</h2>
+				<p class="[ c-Hero__text ]">{{ HeroText }}</p>
+				{% if HeroLink %}
+					<a href="{{ HeroLink }}" class="[ c-Hero__link ]">{{ HeroLinkText }}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

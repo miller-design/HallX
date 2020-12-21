@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+HeroImage: hero-example.jpg
+HeroImageAlt: HeroImageAlt
+HeroSubHeader: Sub Header
+HeroHeader: Your logistical needs made reality
+HeroText: Lorem ipsum dolor sit amet, consect adipiscing elit Suspendisse.
+HeroLink: /contact/
+HeroLinkText: Get In Touch
+QuoteText: Lorem ipsum dolor sit amet, sit dolor consectetur adipiscing elit.
+QuoteName: Joe Blogs
+QuotePosision: CEO
+---
+
+{% include "../components/c-Hero.njk" %}
+
+{% set CarouselTitle = 'Title Example' %}
+{% set CarouselItems = [
+	{
+		image: 'hero-example.jpg',
+		imageAlt: 'alt text',
+		name: '01 - Contact Us',
+		description: 'Request your free, no-obligation consultation with one of our directors using the form below. We will organise a call at a time that is convenient to you, wherever you are in the world.',
+		url: 'http://google.com',
+		linkText: 'contact us'
+	},
+	{
+		image: 'hero-example.jpg',
+		imageAlt: 'alt text',
+		name: '02 - Discuss',
+		description: 'Tell us about the issues you have in your business, and we will give advice on how we (or our trusted partners) can help you to solve all your operational woes.',
+		url: 'http://google.com',
+		linkText: 'contact us'
+	},
+	{
+		image: 'hero-example.jpg',
+		imageAlt: 'alt text',
+		name: '03 - Quote',
+		description: 'We provide a menu-based pricing structure tailored to your business. We charge a fee to cover our setup costs, a monthly basic that includes most of the services we mutually agree you will need, and everything else is pay-as-you-go (because we don’t believe in charging for services you don’t use).',
+		url: 'http://google.com',
+		linkText: 'contact us'
+	},
+	{
+		image: 'hero-example.jpg',
+		imageAlt: 'alt text',
+		name: '04 - Setup',
+		description: 'We work closely with you to integrate your new HallX services into your existing systems, together we craft a completely consistent, beautifully bespoke customer experience that your customers will want to keep coming back to. Don’t worry about downtime, we also provide complementary rapid-roll-out interim solutions so your services can continue uninterrupted while we work on crafting your dream customer experience.',
+		url: 'http://google.com',
+		linkText: 'contact us'
+	}] 
+%}
+
+{% include "../components/c-Carousel.njk" %}
+
+{% include "../components/c-Quote.njk" %}
+
+{% set CarouselTitle = 'Title Example' %}
+{% set CarouselItems = [
+	{
+		image: 'slider-test-3.jpg',
+		imageAlt: 'alt text',
+		name: 'Service Name',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
+		url: 'http://google.com',
+		linkText: 'read more'
+	},
+	{
+		image: 'slider-test.jpg',
+		imageAlt: 'alt text',
+		name: 'Service Name',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
+		url: 'http://google.com',
+		linkText: 'read more'
+	},
+	{
+		image: 'slider-test-2.jpg',
+		imageAlt: 'alt text',
+		name: 'Service Name',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
+		url: 'http://google.com',
+		linkText: 'read more'
+	},
+	{
+		image: 'slider-test-4.jpg',
+		imageAlt: 'alt text',
+		name: 'Service Name',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
+		url: 'http://google.com',
+		linkText: 'read more'
+	}] 
+%}
+
+{% include "../components/c-Carousel.njk" %}
+
+{% set TwoModuleHeaderLeft = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan.' %}
+{% set TwoModuleTextLeft = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia.' %}
+{% set TwoModuleLinkUrlLeft = '#' %}
+{% set TwoModuleLinkTextLeft = 'Link Text' %}
+{% set TwoModuleImageLeft = 'test-img-2.jpg' %}
+{% set TwoModuleImageAltLeft = 'image alt text here' %}
+
+{% set TwoModuleHeaderRight = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan.' %}
+{% set TwoModuleTextRight = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia.' %}
+{% set TwoModuleLinkUrlRight = '#' %}
+{% set TwoModuleLinkTextRight = 'Link Text' %}
+{% set TwoModuleImageRight = 'test-img.jpg' %}
+{% set TwoModuleImageAltRight = 'image alt text here' %}
+
+{% include "../components/c-TwoUpModule.njk" %}

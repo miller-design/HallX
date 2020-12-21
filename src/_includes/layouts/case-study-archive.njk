@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+permalink: "case-studies/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+pagination:
+  data: collections.casestudies
+  size: 11
+  alias: post
+  reverse: true
+---
+
+{% set PageHeaderHeader = 'Case Studies' %}
+{% set PageHeaderCopy = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat tempor blandit. Fusce eget dui dolor. Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien.' %}
+
+{% include "../components/c-PageHeader.njk" %}
+
+<section class="[ c-PostList c-PostList--wide-view ]">
+  <div class="[ c-PostList__grid ]">
+    {%- for post in collections.casestudies -%}
+      <div class="[ c-PostList__item ]">
+        <a href="{{ post.url }}">
+          <div class="[ c-PostList__item-inner ]">
+						<div class="[ c-PostList__image-wrap ]">
+            	<img src="/img/{{ post.data.featuredImage }}" srcset="/img/{{ post.data.featuredImage }}" class="[ c-PostList__image ]" alt="{{ post.data.featuredImageAlt }}">
+						</div>	
+            <p class="[ c-PostList__header ]">{{ post.data.title }}</p>
+            <p class="[ c-PostList__intro ]">{{ post.data.shortDescription }}</p>
+            <a href="{{ post.url }}" class="[ c-PostList__link ]">Read More</a>
+          </div>
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+<!-- Pagination links -->
+{# {% if pagination.links  | length > 1 %}
+  <div class="[ l-Pagination ]">
+    <div class="[ l-Pagination__inner ]">
+      <div class="[ l-Pagination__wrap ]">
+        {% if pagination.previousPageHref %}{% set paginationPreviousActive = 'l-Pagination__previous--active' %}{% endif %}
+        <a class="[ l-Pagination__previous {{ paginationPreviousActive }} ]" href="{{ pagination.previousPageHref }}">Previous</a>
+        <span class="[ l-Pagination__numbers ]">{{ pagination.pageNumber + 1 }} of {{ pagination.links | length  }}</span>
+        {% if pagination.nextPageHref %}{% set paginationNextActive = 'l-Pagination__next--active' %}{% endif %}
+        <a class="[ l-Pagination__next {{ paginationNextActive }} ]" href="{{ pagination.nextPageHref }}" >Next</a>
+      </div>
+    </div>
+  </div>
+{% endif %} #}

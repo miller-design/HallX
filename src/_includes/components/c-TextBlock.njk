@@ -1,0 +1,11 @@
+<section class="[ c-TextBlock ]">
+	<div class="[ c-TextBlock__inner ]">
+		<div class="[ c-TextBlock__content ]">
+			{% if TextBlockHeader %}
+				<{{ TextBlockHeaderType }} class="[ c-TextBlock__header ]">{{ TextBlockHeader }}</{{ TextBlockHeaderType | safe }}>
+			{% endif %}
+			<p class="[ c-TextBlock__text ]">{{ TextBlockCopy | safe }}</p>
+			<a href="{{ TextBlockHeaderLinkUrl }}" class="[ c-TextBlock__link ]">{{ TextBlockHeaderLinkText }}</a>
+		</div>
+	</div>
+</section>

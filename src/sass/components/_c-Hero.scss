@@ -1,0 +1,119 @@
+// Hero Styles
+
+// Blocks
+.c-Hero {
+	width: 100%;
+	position: relative;
+	display: block;
+
+	@include scale-property(margin-top, 80px, 135px);
+	@include scale-property(margin-bottom, 120px, 240px);
+
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.c-Hero__inner {
+	width: 100%;
+	position: relative;
+
+	@include container;
+}
+
+// Elements
+.c-Hero__content-wrap {
+	position: absolute;
+	left: 0;
+
+	@include scale-property(bottom, 60px, 120px);
+	@include container;
+}
+
+.c-Hero__img {
+	width: 100%;
+	display: block;
+	background-color: $c-grey;
+
+	@include col-width(1, -1);
+
+	img {
+		object-fit: cover;
+		min-height: 700px;
+	}
+}
+
+.c-Hero__overlay {
+	position: absolute;
+	top: 0;
+	left: $grid_margins_mobile;
+	width: calc(100% - #{$grid_margins_mobile * 2});
+	height: 100%;
+	background-color: $c-black;
+	opacity: 0.5;
+	mix-blend-mode: multiply;
+	pointer-events: none;
+	
+	@include media(">=medium") {
+		left: $grid_margins_desktop;
+		width: calc(100% - #{$grid_margins_desktop * 2});
+	}
+}
+
+.c-Hero__content {
+	display: flex;
+	align-items: flex-end;
+	align-content: flex-end;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+		padding-left: 0;
+		padding-right: 0;
+
+		@include col-width(2, 10);
+	}
+
+	@include media(">=large") {
+		@include col-width(2, 8);
+	}
+}
+
+.c-Hero__subheader {
+	width: 100%;
+	margin-top: 0;
+	color: $c-white;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+
+	@include roboto-bold-22-16;
+}
+
+.c-Hero__header {
+	width: 100%;
+	margin-top: 0;
+	color: $c-white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+
+	@include roboto-bold-60-28;
+}
+
+.c-Hero__text {
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: $c-white;
+
+	@include roboto-regular-35-22;
+}
+
+.c-Hero__link {
+	margin-top: 50px;
+
+	@include button($c-white, $c-black);
+}

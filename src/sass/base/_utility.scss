@@ -1,0 +1,41 @@
+// Helper Classes
+
+// Text Aligns
+.u-align--center {
+	text-align: center;
+}
+
+.u-text-uppercase {
+	text-transform: uppercase;
+}
+
+// Lists
+.u-List--bare,
+%list-bare {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.u-no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.u-PageOverlay {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: +1;
+	background-color: $c-black;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 300ms $t-standard-curve-alt;
+	
+	&.is-active {
+		opacity: 0.2;
+		pointer-events: auto;
+	}
+}

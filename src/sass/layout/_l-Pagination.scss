@@ -1,0 +1,44 @@
+// Pagination Layout
+
+// Blocks
+.l-Pagination {
+	width: 100%;
+
+	@include scale-property(margin-bottom, 50px, 100px);
+}
+
+.l-Pagination__inner {
+
+	@include container;
+}
+
+.l-Pagination__wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include col-width(1, -1);
+}
+
+// elements
+.l-Pagination__previous,
+.l-Pagination__next {
+	opacity: 0.5;
+	pointer-events: none;
+
+	@include button;
+}
+
+.l-Pagination__previous {
+	margin-right: 20px;
+}
+
+.l-Pagination__next {
+	margin-left: 20px;
+}
+
+.l-Pagination__next--active,
+.l-Pagination__previous--active {
+	opacity: 1;
+	pointer-events: auto;
+}

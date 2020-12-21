@@ -1,0 +1,77 @@
+// Global Configs
+
+/* =========== Spacing Values ============ */
+
+// mobile versions
+$VSM1: 10px;
+$VSM2: 20px;
+$VSM3: 25px;
+$VSM4: 35px;
+$VSM5: 50px;
+$VSM6: 75px;
+$VSM7: 85px;
+$VSM8: 130px;
+
+// desktop versions
+$VSD1: 20px;
+$VSD2: 40px;
+$VSD3: 50px;
+$VSD4: 70px;
+$VSD5: 100px;
+$VSD6: 150px;
+$VSD7: 175px;
+$VSD8: 280px;
+
+
+/* =========== Breakpoints ============ */
+
+$breakpoints: (
+	xsmall: 320px,
+	small: 768px,
+	medium: 1024px,
+	large: 1440px,
+	xlarge: 1920px,
+	xxlarge: 2000px
+);
+
+
+/* =========== Colours ============ */
+
+$c-white: #fff;
+$c-blue: #006CFF;
+$c-grey: #f2f2f2;
+$c-black: #000;
+
+
+/* =========== Z-Index ============ */
+
+$z-base: 0;
+$z-level-one: 10;
+$z-level-two: 20;
+$z-level-three: 30;
+$z-level-four: 40;
+
+
+/* =========== Transitions ============ */
+
+$t-standard-curve: cubic-bezier(0.2, 1, 0.22, 1);
+$t-standard-curve-alt: cubic-bezier(0.37, 0, 0.63, 1);
+
+
+/* =========== Box Shadows ============ */
+
+$standard-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+$darker-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4);
+
+
+/* =========== Grid ============ */
+
+$grid_cols_mobile: 6;
+$grid_cols_desktop: 12;
+
+$grid_column_gap_mobile: 10px;
+$grid_column_gap_tablet: 16px;
+$grid_column_gap_desktop: 30px;
+
+$grid_margins_mobile: 23px;
+$grid_margins_desktop: 35px;

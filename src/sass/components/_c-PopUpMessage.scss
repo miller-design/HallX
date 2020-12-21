@@ -1,0 +1,110 @@
+// PopUpMessage Styles
+
+// Blocks
+.c-PopUpMessage {
+	width: 95%;
+	position: fixed;
+	opacity: 0;
+	pointer-events: none;
+	bottom: 20px;
+	background: $c-white;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	z-index: $z-level-four;
+	box-shadow: $standard-shadow;
+	transition: 
+		400ms opacity $t-standard-curve-alt,
+		400ms bottom $t-standard-curve-alt;
+
+	@include media("<small") {
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@include media(">=small") {
+		max-width: 500px;
+		right: 25px;
+	}
+
+	@include media(">=medium") {
+		max-width: 450px;
+	}
+
+	&.is-active {
+		pointer-events: auto;
+		bottom: 35px;
+		opacity: 1;
+
+		@include media("<small") {
+			bottom: 15px;
+		}	
+	}
+}
+
+.c-PopUpMessage__header {
+	display: block;
+	margin-bottom: 10px;
+
+	@include roboto-bold-22-16;
+}
+
+.c-PopUpMessage__text {
+	display: block;
+	margin-bottom: 10px;
+
+	@include roboto-regular-16;
+}
+
+.c-PopUpMessage__link {
+	display: inline-block;
+
+	@include button($c-blue, $c-white);
+}
+
+.c-PopUpMessage__close {
+	position: absolute;
+	top: 25px;
+	right: 20px;
+	width: 20px;
+	height: 12px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: $z-level-four;
+	transition: 400ms opacity $t-standard-curve-alt;
+	pointer-events: auto;
+
+	@include media("<small") {
+		top: 22px;
+	}
+
+	@media (hover: hover) {
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	.c-PopUpMessage__close-row {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $c-black;
+		transform-origin: center, center;
+		transform: translateY(-50%);
+		transition: 300ms opacity $t-standard-curve-alt;
+	}
+
+	.c-PopUpMessage__close-row:first-of-type {
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+	}
+
+	.c-PopUpMessage__close-row:last-of-type {
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+	}
+}

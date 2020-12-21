@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+{%- set pageTitle %}{% if title %}{{ title }} | {% endif %}{{ meta.siteName }}{% endset -%}
+{%- set pageDescription %}{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
+{%- set pageSocialImg %}{{ meta.url }}/previews/{% if title %}{{ title | slug }}{% else %}home{% endif %}.png{% endset -%}
+  <head>
+    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{pageTitle}}</title>
+    <meta name="description" content="{{pageDescription}}" />
+    <link rel="icon" href="{{ '/favicon.png' | url }}" />
+    <link href="{{ '/css/style.css' | url }}" rel="stylesheet" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% if meta.twitterUsername %}
+      <meta name="twitter:creator" content="@{{ meta.twitterUsername }}" />
+    {% endif %}
+    <meta name="twitter:title" content="{{pageTitle}}"/>
+    <meta name="twitter:description" content="{{pageDescription}}" />
+
+    <meta name="og:title" content="{{pageTitle}}"/>
+    <meta name="og:description" content="{{pageDescription}}"/>
+    <meta property="og:image" content="{{pageSocialImg}}" />
+    <meta name="twitter:image" content="{{pageSocialImg}}" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ meta.siteName }}" href="/feed/"/>
+  </head>
+  <body>
+
+    <header class="[ l-Header ]{% if headerClass %}[ {{ headerClass }} ]{% endif %}">
+      <div class="[ l-Header__inner ]">
+        <div class="[ l-Header__left ]">
+          {% include "../components/c-Menu.njk" %}
+          {% include "../components/c-TopNav.njk" %}
+        </div>
+        <div class="[ l-Header__right ]">
+          <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="81.707" height="26.592" viewBox="0 0 81.707 26.592">
+              <path id="Path_70" data-name="Path 70" d="M22.473,0H17.346V-10.664h-10V0H2.222V-24.883H7.349V-14.8h10V-24.883h5.127ZM37.341,0a5.485,5.485,0,0,1-.5-1.658,5.976,5.976,0,0,1-4.666,2,6.565,6.565,0,0,1-4.5-1.572A5.057,5.057,0,0,1,25.891-5.2,5.226,5.226,0,0,1,28.07-9.707a10.752,10.752,0,0,1,6.3-1.589h2.273v-1.06a3.047,3.047,0,0,0-.658-2.051,2.588,2.588,0,0,0-2.076-.769,2.943,2.943,0,0,0-1.957.6,2.032,2.032,0,0,0-.709,1.641H26.3a4.961,4.961,0,0,1,.991-2.974,6.552,6.552,0,0,1,2.8-2.145,10.214,10.214,0,0,1,4.067-.778,8.07,8.07,0,0,1,5.426,1.718A6.008,6.008,0,0,1,41.6-12.288v8.015a8.84,8.84,0,0,0,.735,3.982V0ZM33.257-3.435a4.254,4.254,0,0,0,2.017-.487,3.2,3.2,0,0,0,1.367-1.307V-8.408H34.795q-3.708,0-3.948,2.563l-.017.291a1.977,1.977,0,0,0,.649,1.521A2.523,2.523,0,0,0,33.257-3.435ZM50.6,0H45.647V-26.25H50.6Zm9.28,0H54.927V-26.25h4.956Zm13.3-16.3,4.666-8.579h5.9L76.494-12.544,83.928,0H77.964L73.179-8.716,68.394,0H62.429l7.434-12.544L62.617-24.883h5.9Z" transform="translate(-2.222 26.25)"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="[ l-Main ]">
+      {{ content | safe }}
+    </main>
+
+    <footer class="[ l-Footer ]">
+      <div class="[ l-Footer__inner ]">
+        <div class="[ l-Footer__top ]">
+          <div class="[ l-Footer__left ]">
+            <div class="[ l-Footer__col ]">
+              <p class="[ l-Footer__col-title ]">Get in Touch:</p>
+              <p class="[ l-Footer__email ]"><a href="mailto:info@contactemail.com">info@contactemail.com</a></p>
+            </div>
+            <div class="[ l-Footer__col ]">
+              <p class="[ l-Footer__col-title ]">Stay Connected</p>
+              <ul class="[ l-Footer__list ][ u-List--bare ]">
+                <li><a href="#" target="_blank" rel="noopener"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="438.536px" height="438.536px" viewBox="0 0 438.536 438.536" style="enable-background:new 0 0 438.536 438.536;" xml:space="preserve"><g><path d="M421.981,16.562C410.941,5.519,397.711,0,382.298,0H56.248C40.83,0,27.604,5.521,16.561,16.562 C5.52,27.6,0.001,40.828,0.001,56.243V382.29c0,15.413,5.518,28.644,16.56,39.683c11.043,11.04,24.272,16.563,39.687,16.563 h326.046c15.41,0,28.644-5.523,39.684-16.563c11.043-11.039,16.557-24.27,16.557-39.683V56.243 C438.534,40.825,433.021,27.604,421.981,16.562z M157.462,158.025c17.224-16.652,37.924-24.982,62.097-24.982 c24.36,0,45.153,8.33,62.381,24.982c17.228,16.655,25.837,36.785,25.837,60.386c0,23.598-8.609,43.729-25.837,60.379 c-17.228,16.659-38.014,24.988-62.381,24.988c-24.172,0-44.87-8.336-62.097-24.988c-17.228-16.652-25.841-36.781-25.841-60.379 C131.621,194.81,140.234,174.681,157.462,158.025z M388.865,370.589c0,4.945-1.718,9.083-5.141,12.416 c-3.433,3.33-7.519,4.996-12.282,4.996h-305.2c-4.948,0-9.091-1.666-12.419-4.996c-3.333-3.326-4.998-7.471-4.998-12.416V185.575 H89.08c-3.805,11.993-5.708,24.462-5.708,37.402c0,36.553,13.322,67.715,39.969,93.511c26.65,25.786,58.721,38.685,96.217,38.685 c24.744,0,47.583-5.903,68.527-17.703c20.937-11.807,37.486-27.839,49.676-48.112c12.183-20.272,18.274-42.4,18.274-66.38 c0-12.94-1.91-25.406-5.715-37.402h38.547v185.014H388.865z M388.865,115.626c0,5.52-1.903,10.184-5.716,13.99 c-3.805,3.809-8.466,5.711-13.989,5.711h-49.676c-5.517,0-10.185-1.903-13.99-5.711c-3.806-3.806-5.708-8.47-5.708-13.99V68.522 c0-5.33,1.902-9.945,5.708-13.848c3.806-3.901,8.474-5.854,13.99-5.854h49.676c5.523,0,10.185,1.952,13.989,5.854 c3.812,3.903,5.716,8.518,5.716,13.848V115.626z"/></g></svg></a></li>
+                <li><a href="#" target="_blank" rel="noopener"><svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="[ l-Footer__right ]">
+            <svg class="[ l-Footer__svg-mark ]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 679.6 1080.5" style="enable-background:new 0 0 679.6 1080.5;" xml:space="preserve"><path class="st0" d="M339.8,523.8L0,0v1080.5l339.8-509.1l339.8,509.1V0L339.8,523.8z M34,968.3V564.9h269.3L34,968.3z M34,530.9v-416l269.9,416H34z M645.6,114.9v416H375.7L645.6,114.9z M645.6,968.3L376.3,564.9h269.3V968.3z"/></svg>
+          </div>
+        </div>
+        </div>
+        <div class="[ l-Footer__bottom ]">
+          <div class="[ l-Footer__left ]">
+            <p class="[ l-Footer__copyright ]">© {% year %} Nuneaton Lacrosse Club / <a href="/privacy-policy/" class="[ l-Footer__link ]">Privacy Policy</a></p>
+          </div>
+          <div class="[ l-Footer__right ]">
+            <p class="[ l-Footer__credit ]">Site by <a href="http://jackmiller.design/" target="_blank" rel="noopener" class="[ l-Footer__link ]">Miller Design</a></p> 
+          </div>
+        </div>
+      </div>
+
+      <div class="[ u-PageOverlay ][ js-page-overlay ]"></div>
+
+      {% include "../components/c-PopUpMessage.njk" %}
+      
+      <script src="https://unpkg.com/flickity@2.2/dist/flickity.pkgd.js"></script>
+      <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+
+      <script type="module" src="{{ "/js/index.js" | url }}"></script>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+// Menu Styles
+
+// Blocks
+.c-TopNav {
+	position: relative;
+	pointer-events: auto;
+
+	@include media("<small") {
+		display: none;
+	}
+}
+
+.c-TopNav__nav {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: content;
+	align-content: center;
+	border-left: 1px solid $c-black;
+
+	@include scale-property(padding-top, 5px, 7px);
+	@include scale-property(padding-bottom, 5px, 7px);
+}
+
+.c-TopNav__nav-item {
+	
+	@include scale-property(margin-left, 20px, 40px);
+}
+
+.c-TopNav__link {
+	color: $c-black;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: opacity 200ms $t-standard-curve-alt;
+
+	@media (hover: hover) {
+
+		&:hover {
+			opacity: 0.3;
+		}
+	}
+}

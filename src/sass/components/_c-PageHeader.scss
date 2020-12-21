@@ -1,0 +1,75 @@
+// Page Header Styles
+
+// Blocks
+.c-PageHeader {
+	width: 100%;
+	position: relative;
+	background-color: $c-grey;
+	overflow: hidden;
+	
+	@include scale-property(margin-bottom, 120px, 240px);
+}
+
+.c-PageHeader__inner {
+	min-height: 600px;
+	height: 90vh;
+
+	@include container;
+}
+
+.c-PageHeader__text-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-end;
+	text-align: center;
+	margin-bottom: 120px;
+	position: relative;
+	z-index: +1;
+
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+		margin-bottom: 160px;
+
+		@include col-width(3, 11);
+	}
+}
+
+// Elements
+.c-PageHeader__logomark {
+	width: 100%;
+	max-width: 90vw;
+	max-height: 100vh;
+	position: absolute;
+	bottom: -30%;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0.05;
+	pointer-events: none;
+}
+
+.c-PageHeader__header {
+	text-transform: uppercase;
+	width: 100%;
+
+	@include scale-property(margin-bottom, 20px, 30px);
+	@include roboto-bold-60-28;
+}
+
+.c-PageHeader__text {
+
+	@include roboto-regular-35-22;
+}
+
+.success-page,
+.error-404-page {
+
+	.c-PageHeader {
+		margin-bottom: 0;
+	}
+
+	.c-PageHeader__inner {
+		height: 100vh;
+	}
+}

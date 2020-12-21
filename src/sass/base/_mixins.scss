@@ -1,0 +1,179 @@
+// Mixins 
+
+// transition mixin
+@mixin site-transition($type:all, $speed:300ms) {
+	transition: $type $speed cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+
+// Variable Spacing (scale-property) mixin
+$resolution-range-bottom: map-get($breakpoints, xsmall);
+$resolution-range-top: map-get($breakpoints, xxlarge);
+
+@function get-linear-size($mobile-size, $desktop-size) {
+	$a: ($desktop-size - $mobile-size) / ( $resolution-range-top - $resolution-range-bottom );
+	$b: -$a * $resolution-range-bottom;
+
+	@return calc(#{$a} * 100vw + #{$b + $mobile-size});
+}
+
+@mixin scale-property($field, $mobile-size, $desktop-size) {
+	#{$field}: get-linear-size($mobile-size, $desktop-size);
+
+	@include media(">xlarge") {
+		#{$field}: $desktop-size;
+	}
+
+	@include media("<xsmall") {
+		#{$field}: $mobile-size;
+	}
+}
+
+// Type mixins
+@function tracking( $target ) {
+
+	@return ($target / 1000) * 1em;
+}
+
+@mixin tracking( $target ) {
+	letter-spacing: tracking($target);
+}
+
+@function line-height($value, $base) {
+	// First, lets convert our $base to pixels
+	// If the base font size is a %, then multiply it by 16px
+	@if unit($base) == "%" {
+		$base: ($base / 100%) * 16px;
+	}
+
+	@if unit($base) == "rem" {
+		$base: strip-unit($base) * 16px;
+	}
+
+	@if unit($base) == "em" {
+		$base: strip-unit($base) * 16px;
+	}
+
+	// Now let's convert our value to pixels too
+	@if unit($value) == "%" {
+		$value: ($value / 100%) * $base;
+	}
+
+	@if unit($value) == "rem" {
+		$value: strip-unit($value) * $base;
+	}
+
+	@if unit($value) == "em" {
+		$value: strip-unit($value) * $base;
+	}
+
+	// 'px'
+	@if unit($value) == "px" {
+
+		@return strip-unit($value) / strip-unit($base);
+	}
+
+	// assume that line-heights greater than 10 are meant to be absolute in 'px'
+	@if unitless($value) and ($value > 10) {
+
+		@return $value / strip-unit($base);
+	}
+
+	@return $value;
+}
+
+
+/// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+/// @param {Number} $num - Number to strip unit from.
+/// @returns {Number} The same number, sans unit.
+@function strip-unit($num) {
+
+	@return $num / ($num * 0 + 1);
+
+}
+
+
+@mixin type-size($max-font-size, $min-font-size, $line-height) {
+	// to-do: decide lhCrop is a good thing to add here?
+	$unitless-line-height : line-height($line-height, $max-font-size);
+
+	@include scale-property(font-size, $min-font-size, $max-font-size);
+	line-height: $unitless-line-height;
+}
+
+@mixin line-height($max-font-size, $line-height) {
+	$unitless-line-height : line-height($line-height, $max-font-size);
+	line-height: $unitless-line-height;
+}
+
+// List Mixins
+@mixin fade-out-inactive-li() {
+
+	@media (hover: hover) {
+
+		&:hover > li {
+			opacity: 0.25;
+		}
+
+		&:hover > li:hover {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin button($color: $c-black, $text: $c-white) {
+	padding-top: 10px;
+	text-decoration: none;
+	color: $color;
+	padding-top: 12px;
+	padding-right: 25px;
+	padding-bottom: 12px;
+	padding-left: 20px;
+	border-radius: 0 30px 30px 0;
+	border: 2px solid $color;
+	cursor: pointer;
+	transition:
+		300ms color $t-standard-curve-alt,
+		300ms background-color $t-standard-curve-alt;
+
+	@include roboto-regular-16;
+
+	@media (hover: hover) {
+
+		&:hover {
+			color: $text;
+			background-color: $color;
+		}
+	}
+}
+
+@mixin inline-link() {
+	color: $c-black;
+	text-decoration: none;
+	text-transform: capitalize;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		width: 100%;
+		height: 2px;
+		background-color: $c-blue;
+		transform-origin: right;
+		transform: scaleX(1);
+		transition: 300ms transform $t-standard-curve-alt;
+		pointer-events: none;
+	}
+
+	@media (hover: hover) {
+
+		&:hover {
+
+			&::after {
+				transform: scaleX(0);
+			}
+		}
+	}
+}

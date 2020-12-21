@@ -1,0 +1,80 @@
+// Quote Styles
+
+// Blocks
+.c-Carousel {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	@include scale-property(margin-bottom, 120px, 240px);
+}
+
+.c-Carousel__inner {
+
+	@include container;
+}
+
+// Elements
+.c-Carousel__header {
+
+	@include col-width(1, -1);
+	@include scale-property(margin-bottom, 20px, 60px);
+	@include roboto-bold-42-20;
+
+	@include media(">=medium") {
+		@include col-width(2, -1);
+	}
+}
+
+.c-Carousel__slider {
+
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+		@include col-width(2, -1);
+	}
+
+	.flickity-viewport {
+		overflow: initial;
+	}
+
+	.carousel-cell {
+		width: 80%;
+		margin-right: 20px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		@include media(">=medium") {
+			width: 35%;
+			margin-right: 40px;
+		}
+	}
+}
+
+.c-Carousel__image {
+	width: 100%;
+	display: flex;
+	margin-bottom: 25px;
+}
+
+.c-Carousel__text-header {
+	display: flex;
+	margin-bottom: 5px;
+
+	@include roboto-bold-35-18;
+}
+
+.c-Carousel__text-block {
+	display: flex;
+	margin-bottom: 20px;
+
+	@include roboto-regular-16;
+}
+
+.c-Carousel__link {
+
+	@include inline-link;
+	@include roboto-regular-16;
+}

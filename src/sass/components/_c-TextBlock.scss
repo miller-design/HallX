@@ -1,0 +1,42 @@
+// Text Block Styles
+
+// Blocks
+.c-TextBlock {
+	width: 100%;
+	position: relative;
+
+	@include scale-property(margin-bottom, 120px, 240px);
+}
+
+.c-TextBlock__inner {
+
+	@include container;
+}
+
+.c-TextBlock__content {
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+
+		@include col-width(2, 10);
+	}
+}
+
+// Elements
+.c-TextBlock__header {
+	
+	@include roboto-bold-35-18;
+	@include scale-property(margin-bottom, 30px, 60px);
+}
+
+.c-TextBlock__text {
+	
+	@include roboto-regular-18-16;
+	@include scale-property(margin-bottom, 15px, 25px);
+}
+
+.c-TextBlock__link {
+	
+	@include inline-link;
+	@include roboto-regular-16;
+}

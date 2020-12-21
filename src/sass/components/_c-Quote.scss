@@ -1,0 +1,41 @@
+// Quote Styles
+
+// Blocks
+.c-Quote {
+	width: 100%;
+	position: relative;
+
+	@include scale-property(margin-bottom, 120px, 240px);
+}
+
+.c-Quote__inner {
+	width: 100%;
+	
+	@include container;
+}
+
+.c-Quote__wrap {
+
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+
+		@include col-width(2, 10);
+	}
+
+	@include media(">=large") {
+		@include col-width(2, 8);
+	}
+}
+
+/* Elements */
+.c-Quote__text {
+
+	@include roboto-bold-60-28;
+	@include scale-property(margin-bottom, 20px, 45px);
+}
+
+.c-Quote__by-text {
+
+	@include roboto-bold-22-16;
+}

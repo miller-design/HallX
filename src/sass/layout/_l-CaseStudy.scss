@@ -1,0 +1,105 @@
+// Case Study Layout
+
+// Case Study Blocks
+.l-CaseStudy {
+	width: 100%;
+	position: relative;
+
+	@include scale-property(margin-bottom, 80px, 150px);
+}
+
+.l-CaseStudy__inner {
+
+	@include container;
+}
+
+.l-CaseStudy__header {
+	width: 100%;
+
+	@include col-width(1, -1);
+	@include col-full-bleed;
+}
+
+.l-CaseStudy__left {
+
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+		@include col-width(2, 8);
+	}
+}
+
+.l-CaseStudy__right {
+
+	@include col-width(1, -1);
+
+	@include media(">=medium") {
+		@include col-width(9, 12);
+	}
+}
+
+// Case Study Elements
+.l-CaseStudy {
+
+	.c-TextBlock {
+
+		@include scale-property(margin-bottom, 60px, 120px);
+	}
+
+	.c-TextBlock__content {
+	
+		@include col-width(1, -1);
+		@include col-full-bleed;
+	}
+
+	.c-TextBlock__header {
+		text-transform: uppercase;
+
+		@include scale-property(margin-bottom, 10px, 20px);
+	}
+
+}
+
+.l-CaseStudy__results {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 40px;
+	
+	@include scale-property(margin-bottom, 60px, 120px);
+}
+
+.l-CaseStudy__results-header {
+	
+	@include roboto-bold-35-18;
+	@include scale-property(margin-bottom, 15px, 20px);
+}
+
+.l-CaseStudy__results-text {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+	@include roboto-bold-22-16;
+	@include scale-property(margin-bottom, 15px, 25px);
+
+	&:last-of-type {
+
+		@include scale-property(margin-bottom, 25px, 45px);
+	}
+
+	> img {
+		max-width: 60px;
+		max-height: 50px;
+		width: 100%;
+		margin-right: 15px;
+		position: relative;
+		top: -5px;
+	}
+}
+
+.l-CaseStudy__results-link {
+	display: inline-block;
+
+	@include button($c-blue, $c-white);
+}

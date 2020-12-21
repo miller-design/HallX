@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+<article class="[ l-CaseStudy ]">
+  <div class="[ l-CaseStudy__inner ]">
+
+    <div class="[ l-CaseStudy__header ]">
+      {% include "../components/c-Hero.njk" %}
+    </div>
+
+    <div class="[ l-CaseStudy__left ]">
+      {{ content | safe }}
+    </div>
+
+    <div class="[ l-CaseStudy__right ]">
+      <div class="[ l-CaseStudy__results ]">
+        <p class="[ l-CaseStudy__results-header ]">Results</p>
+        {%- for item in resultArray -%}
+          <p class="[ l-CaseStudy__results-text ]"><img src="/img/icons/{{ item.Icon }}" alt="result image icon"/><span>{{ item.Text }}</span></p>
+       {% endfor %}
+          <a href="#" class="[ l-CaseStudy__results-link ]" download="w3logo">Download Case Study</a>
+      </div>
+    </div>
+
+  </div>
+</article>

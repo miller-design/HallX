@@ -1,0 +1,50 @@
+// Header Layout
+
+// Header Blocks
+.l-Header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-level-one;
+	pointer-events: none;
+	
+	@include scale-property(padding-top, 20px, 40px);
+	@include scale-property(padding-right, 20px, 40px);
+	@include scale-property(padding-left, 20px, 40px);
+}
+
+.l-Header__inner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.l-Header__left {
+	display: flex;
+	align-items: center;
+}
+
+.l-Header__right {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	pointer-events: auto;
+}
+
+// Header Elements
+.l-Header__logo {
+	max-width: 80px;
+	width: 100%;
+	display: inline-block;
+	margin: 0;
+	pointer-events: auto;
+	cursor: pointer;
+
+	@include media("<=small"){
+		max-width: 60px;
+	}
+}

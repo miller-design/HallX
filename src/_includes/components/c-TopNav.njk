@@ -1,0 +1,13 @@
+<div class="[ c-TopNav ]">
+	<ul class="[ c-TopNav__nav ]">
+		{% for item in navigation.topnav %}
+			{% set target = 'target="_self"' %}
+			{% set currentAttribute = '' %}
+			{% if page.url == item.url%}{% set currentAttribute = ' aria-current="page"' %}{% endif %}
+			{% if item.external == true %}{% set target = 'target="_blank" rel="noopener"' %}{% endif %}
+			<li class="[ c-TopNav__nav-item ]">
+				<a href="{{ item.url }}"{{ target | safe }}{{ currentAttribute }} class="[ c-TopNav__link ][ js-menu-link ]">{{ item.text }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

@@ -1,0 +1,148 @@
+// Typography Base
+
+// Font Setup
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$f-Sans: "Roboto", sans-serif;
+
+$f-Pre: monaco, menlo, consolas, "Courier New", monospace;
+$f-body: $f-Sans;
+
+/* font mixins bold weight */
+@mixin roboto-bold-60-28() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 700;
+
+	@include type-size(60px, 28px, 70px);
+	@include tracking(30);
+}
+
+@mixin roboto-bold-42-20() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 700;
+
+	@include type-size(42px, 20px, 52px);
+	@include tracking(30);
+}
+
+@mixin roboto-bold-35-18() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 700;
+
+	@include type-size(35px, 18px, 43px);
+	@include tracking(30);
+}
+
+@mixin roboto-bold-22-16() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 700;
+
+	@include type-size(22px, 16px, 28px);
+	@include tracking(5);
+}
+
+
+/* font mixins regular weight */
+@mixin roboto-regular-35-22() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 400;
+
+	@include type-size(35px, 22px, 42px);
+	@include tracking(30);
+}
+
+@mixin roboto-regular-22-20() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 400;
+
+	@include type-size(22px, 20px, 30px);
+	@include tracking(30);
+}
+
+@mixin roboto-regular-18-16() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 400;
+
+	@include type-size(18px, 16px, 28px);
+	@include tracking(35);
+}
+
+@mixin roboto-regular-16() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+
+	@include line-height(16px, 20px);
+	@include tracking(30);
+}
+
+@mixin roboto-regular-16-wide() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+
+	@include line-height(16px, 20px);
+	@include tracking(100);
+}
+
+@mixin roboto-regular-12() {
+	font-family: $f-Sans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+
+	@include line-height(12px, 14px);
+	@include tracking(30);
+}
+
+@mixin body() {
+
+	em {
+		font-style: normal;
+	}
+}
+
+// Type base styles
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: $f-body;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4;
+	margin: 0;
+	color: $c-black;
+
+	transition: background-color $t-standard-curve, color $t-standard-curve;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+
+	@include body;
+}
+
+p {
+
+	@include body;
+}
+
+button {
+	background-color: $c-white;
+	
+	@include button;
+}

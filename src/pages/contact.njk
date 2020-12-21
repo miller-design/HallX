@@ -1,0 +1,45 @@
+---
+title: "Contact Us"
+description: 'A demo page for people getting in touch.'
+layout: "layouts/page"
+---
+
+{% set PageHeaderHeader = 'Contact Us' %}
+{% set PageHeaderCopy = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat tempor blandit. Fusce eget dui dolor. Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien.' %}
+
+{% include "../_includes/components/c-PageHeader.njk" %}
+
+
+<div class="[ l-Form ]">
+	<div class="[ l-Form__inner ]">
+		<form name="contact-form" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/success/">
+			<div class="[ l-FormCol l-FormCol--full ]">
+				<div class="[ l-FormCol l-FormCol--split ]">
+					<input name="first-name" type="text" id="first-name" class="[ js-form-field ]">
+					<label for="first-name">First Name</label>
+				</div>
+				<div class="[ l-FormCol l-FormCol--split ]">
+					<input name="last-name" type="text" id="last-name" class="[ js-form-field ]">
+					<label for="last-name">Last Name</label>
+				</div>
+			</div>
+			<div class="[ l-FormCol l-FormCol--full ]">
+				<input name="email" type="email" id="email" class="[ js-form-field ]">
+				<label for="email">Email Address</label>
+			</div>
+			<div class="[ l-FormCol l-FormCol--full ]">
+				<input name="subject" type="text" id="subject" class="[ js-form-field ]">
+				<label for="subject">Subject</label>
+			</div>
+			<div class="[ l-FormCol l-FormCol--full ]">
+				<textarea name="comment" id="comment" rows="1" class="[ js-form-field ]"></textarea>
+				<label for="comment">Message</label>
+			</div>
+			<div class="[ l-FormCol l-FormCol--hidden ]">
+				<input name="bot-field" type="hidden">
+				<label>Don’t fill this out if you're human:</label>
+			</div>
+			<button type="submit">Submit form</button>
+		</form>
+	</div>
+</div>

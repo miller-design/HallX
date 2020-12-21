@@ -1,0 +1,15 @@
+<section class="[ c-Carousel ]">
+	<div class="[ c-Carousel__inner ]">
+		<h2 class="[ c-Carousel__header ]">{{ CarouselTitle }}</h2>
+		<div class="[ c-Carousel__slider ][ js-carousel ]">
+			{%- for item in CarouselItems -%}
+				<div class="carousel-cell">
+					<img src="/img/{{ item.image }}" srcset="/img/{{ item.image }}" class="[ c-Carousel__image ]" alt="{{ item.imageAlt }}">
+					<p class="[ c-Carousel__text-header ]">{{ item.name }}</p>
+					<p class="[ c-Carousel__text-block ]">{{ item.description }}</p>
+					<a href="{{ item.url }}" class="[ c-Carousel__link ]">{{ item.linkText }}</a>
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</section>

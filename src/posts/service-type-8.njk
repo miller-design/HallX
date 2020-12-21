@@ -1,0 +1,44 @@
+---
+title: "Service Name"
+shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet. Lorem ipsum dolor sit amet dolor sit amet."
+featuredImage: "slider-test-4.jpg"
+featuredImageAlt: "Alt text is here"
+---
+
+{% set PageHeaderHeader = title %}
+{% set PageHeaderCopy = shortDescription %}
+
+{% include "../_includes/components/c-PageHeader.njk" %}
+
+
+{% set TwoModuleHeaderLeft = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan.' %}
+{% set TwoModuleTextLeft = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia.' %}
+{% set TwoModuleLinkUrlLeft = '#' %}
+{% set TwoModuleLinkTextLeft = 'Link Text' %}
+{% set TwoModuleImageLeft = 'test-img-2.jpg' %}
+{% set TwoModuleImageAltLeft = 'image alt text here' %}
+
+{% set TwoModuleHeaderRight = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan.' %}
+{% set TwoModuleTextRight = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia.' %}
+{% set TwoModuleLinkUrlRight = '#' %}
+{% set TwoModuleLinkTextRight = 'Link Text' %}
+{% set TwoModuleImageRight = 'test-img.jpg' %}
+{% set TwoModuleImageAltRight = 'image alt text here' %}
+
+{% include "../_includes/components/c-TwoUpModule.njk" %}
+
+
+{% set TextBlockHeader = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. '%}
+{% set TextBlockHeaderType = 'h2' %}
+{% set TextBlockCopy %}
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat tempor blandit. 
+	Fusce eget dui dolor. Integer dapibus id purus et sollicitudin. Fusce eget libero nec sapien faucibus volutpat. 
+	Phasellus cursus posuere ante sed ullamcorper. Integer sit amet tortor erat. Vivamus sagittis congue dolor, sit 
+	amet eleifend libero eleifend sed. Nunc ut urna commodo, consectetur dui eget, laoreet purus. Integer erat enim, 
+	cursus id tempor ac, iaculis eu est. Nulla justo metus, porta vel augue quis, faucibus gravida sem. Aliquam aliquam 
+	neque et commodo consectetur. Vivamus fringilla mi sapien, non fermentum massa auctor sit amet.
+{% endset %}
+{% set TextBlockHeaderLinkUrl = '#' %}
+{% set TextBlockHeaderLinkText = 'Link Text' %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}
