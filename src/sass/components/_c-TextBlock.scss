@@ -40,3 +40,9 @@
 	@include inline-link;
 	@include roboto-regular-16;
 }
+
+.c-TextBlock__content ul {
+	margin-top: 5px;
+	list-style: outside;
+	padding-left: 20px;
+}
