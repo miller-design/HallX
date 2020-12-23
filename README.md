@@ -1,10 +1,10 @@
-# nuneaton-lax
+## HallX
 
 this repo is for HallX 11ty site
 
 > Created by Jack Miller
 
-## Development Scripts
+### Development Scripts
 
 **`npm start`**
 
@@ -14,6 +14,6 @@ this repo is for HallX 11ty site
 
 > Production build includes minified, autoprefixed CSS and social preview image generation
 
-## Develoys
+### Develoys
 
 site is hosted on netlify and when code is pushed to main this triggers a deploy on the netlify server
