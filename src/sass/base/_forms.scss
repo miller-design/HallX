@@ -92,6 +92,7 @@ textarea {
 	padding-right: 10px;
 	padding-left: 0;
 
+	@include roboto-regular-18-16;
 
 	&:focus {
 		outline: none;
