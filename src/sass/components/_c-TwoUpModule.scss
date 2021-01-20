@@ -87,12 +87,13 @@
 
 .c-TwoUpModule__link {
 	display: inline-block;
+	margin-left: 10px;
 
 	@include inline-link;
 	@include roboto-regular-16;
 
-	&:not(:first-child) {
-		margin-left: 10px;
+	&:first-of-type {
+		margin-left: 0;
 	}
 }
 
