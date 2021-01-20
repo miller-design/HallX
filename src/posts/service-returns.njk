@@ -1,0 +1,37 @@
+---
+title: "Returns Management"
+shortDescription: "We can manage your returns process for you and reconsolidate them to make the returns process easier for customers and save you up to 20% vs processing case-by-case."
+featuredImage: "test-img.jpg"
+featuredImageAlt: "Alt text is here"
+---
+
+{% set HeroImage = 'tyroc-case-study.jpg' %}
+{% set HeroImageAlt = 'service header featured Image' %}
+{% set HeroHeader = title %}
+{% set HeroSubHeader = 'Our Services' %}
+{% set HeroText = shortDescription %}
+
+{% include "../_includes/components/c-Hero.njk" %}
+
+{% set TextBlockHeader = 'Returns management'%}
+{% set TextBlockHeaderType = 'h2' %}
+{% set TextBlockCopy %}
+	We can manage your returns process for you and reconsolidate them to make the returns process easier for customers 
+	and save you up to 20% vs processing case-by-case. 
+	<br/>
+	<br/>
+	We work with Royal Mail in the UK to provide a printer-free returns service with thousands of locations all across 
+	the UK to allow your customers an easy and simple return experience. We can also help process the returns for your 
+	EU customers with local return addresses in Belgium, Netherlands, Luxembourg, Germany and France.
+	<br/>
+	<br/>
+	We also have a global solution (coming very soon) which offers the same benefits, meaning that a customer in South Africa 
+	can send a domestic printer-free return at their local post office and we can have that return confirmed in two days and 
+	get a resolution for your customer rapidly. This avoids the usual 15 day wait for the package to come back from South Africa, 
+	and then time spent assessing the return. With our solution we can get that package back in the air on day 3 for a superior 
+	customer experience.
+{% endset %}
+{% set TextBlockHeaderLinkUrl = 'contact' %}
+{% set TextBlockHeaderLinkText = 'Book your free consultation' %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}

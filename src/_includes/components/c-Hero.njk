@@ -7,11 +7,11 @@
 		
 		<div class="[ c-Hero__content-wrap ]">
 			<div class="[ c-Hero__content ]">
-				<h1 class="[ c-Hero__subheader ]">{{ HeroSubHeader }}</h1>
-				<h2 class="[ c-Hero__header ]">{{ HeroHeader }}</h2>
+				<p class="[ c-Hero__subheader ]">{{ HeroSubHeader }}</p>
+				<h1 class="[ c-Hero__header ]">{{ HeroHeader }}</h1>
 				<p class="[ c-Hero__text ]">{{ HeroText }}</p>
 				{% if HeroLink %}
-					<a href="{{ HeroLink }}" class="[ c-Hero__link ]">{{ HeroLinkText }}</a>
+					<a href="/{{ HeroLink }}" class="[ c-Hero__link ]">{{ HeroLinkText }}</a>
 				{% endif %}
 			</div>
 		</div>

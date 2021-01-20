@@ -6,7 +6,7 @@ this repo is for HallX 11ty site
 
 ### Development Scripts
 
-**`npm start`**
+**`npm run start`**
 
 > Run 11ty with hot reload at localhost:8080
 

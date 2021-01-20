@@ -1,23 +1,22 @@
 ---
 layout: layouts/base.njk
-HeroImage: hero-example.jpg
-HeroImageAlt: HeroImageAlt
-HeroSubHeader: Sub Header
-HeroHeader: Your logistical needs made reality
-HeroText: Lorem ipsum dolor sit amet, consect adipiscing elit Suspendisse.
-HeroLink: /contact/
-HeroLinkText: Get In Touch
+HeroImage: home-hero.jpg
+HeroImageAlt: Distributing goods around the country
+HeroSubHeader: Customer Service and Operations Outsourcing
+HeroHeader: Ecom Storage, Shipping & Service Solutions
+HeroText: Seamless customer experience & fulfilment solutions for ecommerce sellers of all sizes.
+HeroLink: contact
+HeroLinkText: Book your free consultation
 QuoteText: Lorem ipsum dolor sit amet, sit dolor consectetur adipiscing elit.
-QuoteName: Joe Blogs
-QuotePosision: CEO
+QuoteName: Gemma Noble
+QuotePosision: MD of Lidproject
 ---
 
 {% include "../components/c-Hero.njk" %}
 
-{% set CarouselTitle = 'Title Example' %}
 {% set CarouselItems = [
 	{
-		image: 'hero-example.jpg',
+		image: 'phone-call.jpg',
 		imageAlt: 'alt text',
 		name: '01 - Contact Us',
 		description: 'Request your free, no-obligation consultation with one of our directors using the form below. We will organise a call at a time that is convenient to you, wherever you are in the world.',
@@ -25,28 +24,22 @@ QuotePosision: CEO
 		linkText: 'contact us'
 	},
 	{
-		image: 'hero-example.jpg',
+		image: 'meeting.jpg',
 		imageAlt: 'alt text',
 		name: '02 - Discuss',
-		description: 'Tell us about the issues you have in your business, and we will give advice on how we (or our trusted partners) can help you to solve all your operational woes.',
-		url: 'http://google.com',
-		linkText: 'contact us'
+		description: 'Tell us about the issues you have in your business, and we will give advice on how we (or our trusted partners) can help you to solve all your operational woes.'
 	},
 	{
-		image: 'hero-example.jpg',
+		image: 'paperwork.jpg',
 		imageAlt: 'alt text',
 		name: '03 - Quote',
-		description: 'We provide a menu-based pricing structure tailored to your business. We charge a fee to cover our setup costs, a monthly basic that includes most of the services we mutually agree you will need, and everything else is pay-as-you-go (because we don’t believe in charging for services you don’t use).',
-		url: 'http://google.com',
-		linkText: 'contact us'
+		description: 'We provide a menu-based pricing structure tailored to your business. We charge a fee to cover our setup costs, a monthly basic that includes most of the services we mutually agree you will need, and everything else is pay-as-you-go (because we don’t believe in charging for services you don’t use).'
 	},
 	{
-		image: 'hero-example.jpg',
+		image: 'computer-type.jpg',
 		imageAlt: 'alt text',
 		name: '04 - Setup',
-		description: 'We work closely with you to integrate your new HallX services into your existing systems, together we craft a completely consistent, beautifully bespoke customer experience that your customers will want to keep coming back to. Don’t worry about downtime, we also provide complementary rapid-roll-out interim solutions so your services can continue uninterrupted while we work on crafting your dream customer experience.',
-		url: 'http://google.com',
-		linkText: 'contact us'
+		description: 'We work closely with you to integrate your new HallX services into your existing systems, together we craft a completely consistent, beautifully bespoke customer experience that your customers will want to keep coming back to. Don’t worry about downtime, we also provide complementary rapid-roll-out interim solutions so your services can continue uninterrupted while we work on crafting your dream customer experience.'
 	}] 
 %}
 
@@ -54,56 +47,121 @@ QuotePosision: CEO
 
 {% include "../components/c-Quote.njk" %}
 
-{% set CarouselTitle = 'Title Example' %}
+{% set CarouselTitle = 'Our Services' %}
 {% set CarouselItems = [
 	{
-		image: 'slider-test-3.jpg',
-		imageAlt: 'alt text',
-		name: 'Service Name',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
-		url: 'http://google.com',
+		image: 'fulfilment-thumnail.jpg',
+		imageAlt: 'fulfilment service image',
+		name: 'Ecommerce Fulfilment',
+		description: 'We provide an all-in-one ecommerce fulfilment service where we store, insure and ship your products to your customers for you.',
+		url: '/posts/service-fulfilment/',
+		linkText: 'read more'
+	},
+		{
+		image: 'customer-service-thumbnail.jpg',
+		imageAlt: 'custoimer service agents ready to help',
+		name: 'Customer Service & Reputation Management',
+		description: 'We offer full customer experience management which seamlessly integrates into your current customer service systems and process.',
+		url: '/posts/service-customer-service/',
+		linkText: 'read more'
+	},
+	{
+		image: 'logistics-thumnail.jpg',
+		imageAlt: 'cargo waiting to be loaded at a port',
+		name: 'Logistics Management',
+		description: 'At HallX solving your logistical problems is a complementary part of the service. Bring stock into our warehouse, move your stuff between suppliers, we can get your items where they need to be, when they need to be there.',
+		url: '/posts/service-logistics/',
 		linkText: 'read more'
 	},
 	{
 		image: 'slider-test.jpg',
 		imageAlt: 'alt text',
-		name: 'Service Name',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
+		name: 'Returns Management',
+		description: 'We can manage your returns process for you and reconsolidate them to make the returns process easier for customers and save you up to 20% vs processing case-by-case.',
 		url: 'http://google.com',
 		linkText: 'read more'
 	},
 	{
-		image: 'slider-test-2.jpg',
-		imageAlt: 'alt text',
-		name: 'Service Name',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
-		url: 'http://google.com',
+		image: 'warehouse-thumnail.jpg',
+		imageAlt: 'warehouse storage',
+		name: 'Storage & Warehousing',
+		description: 'Our monthly plans include a huge amount of free storage in our secure UK facility with 24/7 on-site security.',
+		url: '/posts/service-storage-warehousing/',
 		linkText: 'read more'
 	},
 	{
 		image: 'slider-test-4.jpg',
 		imageAlt: 'alt text',
-		name: 'Service Name',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet dolor sit amet.',
+		name: 'Dangerous Goods Shipping Services',
+		description: 'Are you fulfilling a consumer commodity that is classed as a dangerous good? We can help with shipping and storing any dangerous goods as a qualified IATA dangerous goods shipper*.',
 		url: 'http://google.com',
 		linkText: 'read more'
-	}] 
+	},
+	{
+		image: 'brexit-thumbnail.jpg',
+		imageAlt: 'lorries queded up because of brexit',
+		name: 'Brexit Services',
+		description: 'Has your business been impacted by Brexit? Ask us how we can help by booking your free no obligation consultation today.',
+		url: '/posts/service-brexit/',
+		linkText: 'read more'
+	},
+	{
+		image: 'uk-injection-thumnail.jpg',
+		imageAlt: 'royal mail man delivering packages',
+		name: 'Direct Injection Services to the UK',
+		description: 'Are you an EU Webshop selling into the UK, struggling with customs complications post-brexit? We can help.',
+		url: '/posts/service-injection-uk/',
+		linkText: 'read more'
+	},
+	{
+		image: 'eu-injection-thumbnail.jpg',
+		imageAlt: 'German post vans ready and waiting',
+		name: 'Direct Injection Services to the EU, USA, AUS',
+		description: 'UK ecom seller? Choose HallX for hassle free delivery with no nasty surprises for your end customer - available across the EU, Continental US and Australia.',
+		url: '/posts/service-injection-eu-usa-aus/',
+		linkText: 'read more'
+	},
+	{
+		image: 'shopify-thumbnail.jpg',
+		imageAlt: 'shopify admin experiences improved',
+		name: 'Shopify Admin',
+		description: 'We’re able to administrate practically any aspect of a Shopify or wooCommerce site that is a difficulty for you, if you have a task you’re just sick of doing, why not contact us?',
+		url: '/posts/service-shopify-admin/',
+		linkText: 'read more'
+	},
+	{
+		image: 'operations-thumbnail.jpg',
+		imageAlt: 'we are ready to help',
+		name: 'Operations Outsourcing',
+		description: "Is there an element of running your business you hate doing, but you're not ready to give up all your ops? Let us know what you want to stop having to do and we will fit ourselves into your existing systems.",
+		url: '/posts/service-operations-outsourcing/',
+		linkText: 'read more'
+	}]
 %}
 
 {% include "../components/c-Carousel.njk" %}
 
-{% set TwoModuleHeaderLeft = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan.' %}
-{% set TwoModuleTextLeft = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia.' %}
-{% set TwoModuleLinkUrlLeft = '#' %}
-{% set TwoModuleLinkTextLeft = 'Link Text' %}
-{% set TwoModuleImageLeft = 'test-img-2.jpg' %}
-{% set TwoModuleImageAltLeft = 'image alt text here' %}
+{% set TwoModuleHeaderLeft = 'Has your business been impacted by Brexit? Are you experiencing delivery delays & customs issues?' %}
+{% set TwoModuleTextLeft = 'We offer an all-in-one software, transport, postal and customs solution for ecommerce sellers of all sizes.' %}
+{# need to add option to build two links one for EU Sellers, Click here UK Sellers, Click here #}
+{% set TwoModuleLinkArray = [
+	{ 
+		url: 'page-1',
+		text: 'Click here UK Sellers'
+	},
+	{ 
+		url: 'page-2',
+		text: 'Click here EU, USA, AUS Sellers'
+	}]
+%}
+{% set TwoModuleImageLeft = 'phone-call-headset.jpg' %}
+{% set TwoModuleImageAltLeft = 'always here to help' %}
 
-{% set TwoModuleHeaderRight = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan.' %}
-{% set TwoModuleTextRight = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate posuere accumsan. In gravida bibendum lectus eget lacinia.' %}
-{% set TwoModuleLinkUrlRight = '#' %}
-{% set TwoModuleLinkTextRight = 'Link Text' %}
-{% set TwoModuleImageRight = 'test-img.jpg' %}
-{% set TwoModuleImageAltRight = 'image alt text here' %}
+{% set TwoModuleHeaderRight = 'HallX is an all-in-one premium fulfillment and customer service solution for ecommerce, we take care of the day-to-day so you can focus on what matters most.' %}
+{% set TwoModuleTextRight = "We treat our customers' businesses as though they are our own. Contact us today to book your free no obligation consultation with one of our directors." %}
+{% set TwoModuleLinkUrlRight = 'contact' %}
+{% set TwoModuleLinkTextRight = 'Book your free consultation' %}
+{% set TwoModuleImageRight = 'warhouse-interior.jpg' %}
+{% set TwoModuleImageAltRight = 'are warehouse ready for you' %}
 
 {% include "../components/c-TwoUpModule.njk" %}

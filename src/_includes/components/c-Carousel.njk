@@ -7,7 +7,9 @@
 					<img src="/img/{{ item.image }}" srcset="/img/{{ item.image }}" class="[ c-Carousel__image ]" alt="{{ item.imageAlt }}">
 					<p class="[ c-Carousel__text-header ]">{{ item.name }}</p>
 					<p class="[ c-Carousel__text-block ]">{{ item.description }}</p>
-					<a href="{{ item.url }}" class="[ c-Carousel__link ]">{{ item.linkText }}</a>
+					{% if item.url %}
+						<a href="{{ item.url }}" class="[ c-Carousel__link ]">{{ item.linkText }}</a>
+					{% endif %}
 				</div>
 			{%- endfor -%}
 		</div>

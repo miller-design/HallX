@@ -16,7 +16,7 @@ layout: layouts/base.njk
       <div class="[ l-CaseStudy__results ]">
         <p class="[ l-CaseStudy__results-header ]">Results</p>
         {%- for item in resultArray -%}
-          <p class="[ l-CaseStudy__results-text ]"><img src="/img/icons/{{ item.Icon }}" alt="result image icon"/><span>{{ item.Text }}</span></p>
+          <p class="[ l-CaseStudy__results-text ]"><span>{{ item }}</span></p>
        {% endfor %}
           <a href="#" class="[ l-CaseStudy__results-link ]" download="w3logo">Download Case Study</a>
       </div>

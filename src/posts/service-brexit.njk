@@ -1,0 +1,28 @@
+---
+title: "Brexit Services"
+shortDescription: "Has your business been impacted by Brexit? Ask us how we can help by booking your free no obligation consultation today."
+featuredImage: "brexit-thumbnail.jpg"
+featuredImageAlt: "lorries queded up because of brexit"
+---
+
+{% set HeroImage = 'brexit-large.jpg' %}
+{% set HeroImageAlt = 'uk lorry driving on motorway' %}
+{% set HeroHeader = title %}
+{% set HeroSubHeader = 'Our Services' %}
+{% set HeroText = shortDescription %}
+
+{% include "../_includes/components/c-Hero.njk" %}
+
+{% set TextBlockHeader = 'Having Issues Because of Brexit?'%}
+{% set TextBlockHeaderType = 'h2' %}
+{% set TextBlockCopy %}
+	Has your business been impacted by Brexit? Are you experiencing delivery delays for your orders being shipped 
+	to the EU or imports arriving from the EU? We are forging important partnerships with software, trucking, postal 
+	and storage companies to create a custom solution for these issues. We can help your business get through 
+	these uncertain times, coming out stronger on the other side with improved service quality and increased 
+	end-customer satisfaction.
+{% endset %}
+{% set TextBlockHeaderLinkUrl = 'contact' %}
+{% set TextBlockHeaderLinkText = 'Book your free consultation' %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}

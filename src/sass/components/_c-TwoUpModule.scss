@@ -86,9 +86,14 @@
 }
 
 .c-TwoUpModule__link {
+	display: inline-block;
 
 	@include inline-link;
 	@include roboto-regular-16;
+
+	&:not(:first-child) {
+		margin-left: 10px;
+	}
 }
 
 .c-TwoUpModule__img {

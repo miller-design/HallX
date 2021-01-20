@@ -1,0 +1,35 @@
+---
+title: "Ecommerce Fulfilment"
+shortDescription: "We provide an all-in-one ecommerce fulfilment service where we store, insure and ship your products to your customers for you."
+featuredImage: "fulfilment-thumnail.jpg"
+featuredImageAlt: "fulfilment services"
+---
+
+{% set HeroImage = 'fulfilment-large.jpg' %}
+{% set HeroImageAlt = 'fulfilment services and delivery man' %}
+{% set HeroHeader = title %}
+{% set HeroSubHeader = 'Our Services' %}
+{% set HeroText = shortDescription %}
+
+{% include "../_includes/components/c-Hero.njk" %}
+
+{% set TextBlockHeader = 'Ecommerce Fulfilment Services. '%}
+{% set TextBlockHeaderType = 'h2' %}
+{% set TextBlockCopy %}
+	We provide an all-in-one ecommerce fulfilment service where we store, insure and ship your products to your customers for you. This includes product preparation including retail packaging of case-packed units, quality control, ship packaging, customs documentation, labelling, dispatching and returns management. We can provide these services individually or as a package, whether short term or long term.
+	<br/>
+	<br/>
+	Upon receiving client goods we will check a large sample of those goods for quality and make you aware of any quality issues or possible manufacturing defects that may have
+	occurred in this run.
+	<br/>
+	<br/>
+	To avoid the need to use a complicated warehouse management system or other new software that will require you to train staff, we use a system that allows you to see what was put in the package natively within your add-to-cart software (eg Shopify or Woocommerce), this means that if you choose to cancel your subscription to our services, you retain all of your records within your system.
+	<br/>
+	<br/>
+	Let us manage your fulfilment (and even customer service) so you can focus on growing your business or having more free time to enjoy the fruits of your labour.
+
+{% endset %}
+{% set TextBlockHeaderLinkUrl = 'contact' %}
+{% set TextBlockHeaderLinkText = 'Book your free consultation' %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}

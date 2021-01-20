@@ -15,7 +15,6 @@ if(slider !== null) {
 			pageDots: false,
 			contain: true,
 			freeScroll: true,
-			freeScrollFriction: 0.03
 		});
 	}
 }

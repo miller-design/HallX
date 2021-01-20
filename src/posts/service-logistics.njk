@@ -1,0 +1,37 @@
+---
+title: "Logistics Management"
+shortDescription: "At HallX solving your logistical problems is a complementary part of the service. Bring stock into our warehouse, move your stuff between suppliers, we can get your items where they need to be, when they need to be there."
+featuredImage: "logistics-thumnail.jpg"
+featuredImageAlt: "cargo waiting to be loaded at a port"
+---
+
+{% set HeroImage = 'logistics-large.jpg' %}
+{% set HeroImageAlt = 'cargo being crained along at a port' %}
+{% set HeroHeader = title %}
+{% set HeroSubHeader = 'Our Services' %}
+{% set HeroText = shortDescription %}
+
+{% include "../_includes/components/c-Hero.njk" %}
+
+{% set TextBlockHeader = 'Helping Solve Your Logistics Problems?'%}
+{% set TextBlockHeaderType = 'h2' %}
+{% set TextBlockCopy %}
+	At HallX solving your logistical problems is a complementary part of the service. Bring stock into our warehouse, 
+	move your stuff between suppliers, we can get your items where they need to be, when they need to be there.
+	<br/>
+	<br/>
+	We allow our clients to use our import shipping contracts to bring stock in to us, move stock between manufacturers 
+	and to get their items where they need to be. We extend our discounted pre-negotiated rates to you, and on our 
+	monthly plans we don’t charge an additional fee to facilitate these movements for you, meaning your old arduous 
+	internal shipping process can be replaced with a single email to us, safe in the knowledge that your goods will 
+	move just how you want, at a great price without further hassle or difficulty. 
+	<br/>
+	<br/>
+	We can provide assistance with importing stock, exporting stock, “third-country” shipments and the process of 
+	customs clearance. We can also help companies not registered in the UK to import to the UK and pay tax via us, 
+	just ask about our FHDDS accreditation for more info.
+{% endset %}
+{% set TextBlockHeaderLinkUrl = 'contact' %}
+{% set TextBlockHeaderLinkText = 'Book your free consultation' %}
+
+{% include "../_includes/components/c-TextBlock.njk" %}
