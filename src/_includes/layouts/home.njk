@@ -14,6 +14,31 @@ QuotePosision: MD of Lidproject
 
 {% include "../components/c-Hero.njk" %}
 
+{% set TwoModuleHeaderLeft = 'Has your business been impacted by Brexit? Are you experiencing delivery delays & customs issues?' %}
+{% set TwoModuleTextLeft = 'We offer an all-in-one software, transport, postal and customs solution for ecommerce sellers of all sizes.' %}
+{# need to add option to build two links one for EU Sellers, Click here UK Sellers, Click here #}
+{% set TwoModuleLinkArray = [
+	{ 
+		url: 'page-1',
+		text: 'Click here UK Sellers'
+	},
+	{ 
+		url: 'page-2',
+		text: 'Click here EU, USA, AUS Sellers'
+	}]
+%}
+{% set TwoModuleImageLeft = 'phone-call-headset.jpg' %}
+{% set TwoModuleImageAltLeft = 'always here to help' %}
+
+{% set TwoModuleHeaderRight = 'HallX is an all-in-one premium fulfillment and customer service solution for ecommerce, we take care of the day-to-day so you can focus on what matters most.' %}
+{% set TwoModuleTextRight = "We treat our customers' businesses as though they are our own. Contact us today to book your free no obligation consultation with one of our directors." %}
+{% set TwoModuleLinkUrlRight = 'contact' %}
+{% set TwoModuleLinkTextRight = 'Book your free consultation' %}
+{% set TwoModuleImageRight = 'warhouse-interior.jpg' %}
+{% set TwoModuleImageAltRight = 'are warehouse ready for you' %}
+
+{% include "../components/c-TwoUpModule.njk" %}
+
 {% set CarouselItems = [
 	{
 		image: 'phone-call.jpg',
@@ -74,11 +99,11 @@ QuotePosision: MD of Lidproject
 		linkText: 'read more'
 	},
 	{
-		image: 'slider-test.jpg',
-		imageAlt: 'alt text',
+		image: 'returns-thumbnail.jpg',
+		imageAlt: 'checking the returned products',
 		name: 'Returns Management',
 		description: 'We can manage your returns process for you and reconsolidate them to make the returns process easier for customers and save you up to 20% vs processing case-by-case.',
-		url: 'http://google.com',
+		url: '/posts/service-returns/',
 		linkText: 'read more'
 	},
 	{
@@ -90,11 +115,11 @@ QuotePosision: MD of Lidproject
 		linkText: 'read more'
 	},
 	{
-		image: 'slider-test-4.jpg',
-		imageAlt: 'alt text',
+		image: 'dangerous-goods-thumbnail.jpg',
+		imageAlt: 'dangerous goods warehouse worker',
 		name: 'Dangerous Goods Shipping Services',
 		description: 'Are you fulfilling a consumer commodity that is classed as a dangerous good? We can help with shipping and storing any dangerous goods as a qualified IATA dangerous goods shipper*.',
-		url: 'http://google.com',
+		url: '/posts/service-dangerous-goods/',
 		linkText: 'read more'
 	},
 	{
@@ -140,28 +165,3 @@ QuotePosision: MD of Lidproject
 %}
 
 {% include "../components/c-Carousel.njk" %}
-
-{% set TwoModuleHeaderLeft = 'Has your business been impacted by Brexit? Are you experiencing delivery delays & customs issues?' %}
-{% set TwoModuleTextLeft = 'We offer an all-in-one software, transport, postal and customs solution for ecommerce sellers of all sizes.' %}
-{# need to add option to build two links one for EU Sellers, Click here UK Sellers, Click here #}
-{% set TwoModuleLinkArray = [
-	{ 
-		url: 'page-1',
-		text: 'Click here UK Sellers'
-	},
-	{ 
-		url: 'page-2',
-		text: 'Click here EU, USA, AUS Sellers'
-	}]
-%}
-{% set TwoModuleImageLeft = 'phone-call-headset.jpg' %}
-{% set TwoModuleImageAltLeft = 'always here to help' %}
-
-{% set TwoModuleHeaderRight = 'HallX is an all-in-one premium fulfillment and customer service solution for ecommerce, we take care of the day-to-day so you can focus on what matters most.' %}
-{% set TwoModuleTextRight = "We treat our customers' businesses as though they are our own. Contact us today to book your free no obligation consultation with one of our directors." %}
-{% set TwoModuleLinkUrlRight = 'contact' %}
-{% set TwoModuleLinkTextRight = 'Book your free consultation' %}
-{% set TwoModuleImageRight = 'warhouse-interior.jpg' %}
-{% set TwoModuleImageAltRight = 'are warehouse ready for you' %}
-
-{% include "../components/c-TwoUpModule.njk" %}
