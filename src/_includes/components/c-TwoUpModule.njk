@@ -5,8 +5,8 @@
 			<div class="[ c-TwoUpModule__text-block ]">
 				<h3 class="[ c-TwoUpModule__header ]">{{ TwoModuleHeaderLeft }}</h3>
 				<p class="[ c-TwoUpModule__text ]">{{ TwoModuleTextLeft }}</p>
-				{% if TwoModuleLinkArray %}
-					{%- for link in TwoModuleLinkArray -%}
+				{% if TwoModuleLinkLeftArray %}
+					{%- for link in TwoModuleLinkLeftArray -%}
 						<a href="/{{ link.url }}" class="[ c-TwoUpModule__link ]">{{ link.text }}</a>
 					{% endfor %}
 				{% else %}
@@ -22,7 +22,13 @@
 			<div class="[ c-TwoUpModule__text-block ]">
 				<h3 class="[ c-TwoUpModule__header ]">{{ TwoModuleHeaderRight }}</h3>
 				<p class="[ c-TwoUpModule__text ]">{{ TwoModuleTextRight }}</p>
-				<a href="/{{ TwoModuleLinkUrlRight }}" class="[ c-TwoUpModule__link ]">{{ TwoModuleLinkTextRight }}</a>
+				{% if TwoModuleLinkRightArray %}
+					{%- for link in TwoModuleLinkRightArray -%}
+						<a href="/{{ link.url }}" class="[ c-TwoUpModule__link ]">{{ link.text }}</a>
+					{% endfor %}
+				{% else %}
+					<a href="/{{ TwoModuleLinkUrlRight }}" class="[ c-TwoUpModule__link ]">{{ TwoModuleLinkTextRight }}</a>
+				{% endif %}
 			</div>
 			<div class="[ c-TwoUpModule__img ]">
 				<img src="/img/{{ TwoModuleImageRight }}" srcset="/img/{{ TwoModuleImageRight }}" alt="{{ TwoModuleImageAltRight }}">

@@ -14,26 +14,25 @@ QuotePosision: MD of Lidproject
 
 {% include "../components/c-Hero.njk" %}
 
-{% set TwoModuleHeaderLeft = 'Has your business been impacted by Brexit? Are you experiencing delivery delays & customs issues?' %}
-{% set TwoModuleTextLeft = 'We offer an all-in-one software, transport, postal and customs solution for ecommerce sellers of all sizes.' %}
-{# need to add option to build two links one for EU Sellers, Click here UK Sellers, Click here #}
-{% set TwoModuleLinkArray = [
+{% set TwoModuleHeaderLeft = 'We take care of the day-to-day so you can focus on what matters most.' %}
+{% set TwoModuleTextLeft = "HallX is an all-in-one premium fulfillment & customer service solution for ecommerce. We treat our customers' businesses as though they are our own. Contact us today to book your free no obligation consultation with one of our directors." %}
+{% set TwoModuleLinkUrlLeft = 'contact' %}
+{% set TwoModuleLinkTextLeft = 'Book your free consultation' %}
+{% set TwoModuleImageLeft = 'home-page-top.jpg' %}
+{% set TwoModuleImageAltLeft = 'always here to help' %}
+
+{% set TwoModuleHeaderRight = 'Has your business been impacted by Brexit? Are you experiencing delivery delays & customs issues?' %}
+{% set TwoModuleTextRight = 'We offer an all-in-one software, transport, postal and customs solution for ecommerce sellers of all sizes.' %}
+{% set TwoModuleLinkRightArray = [
 	{ 
-		url: 'page-1',
-		text: 'Click here UK Sellers'
+		url: '/posts/service-injection-eu-usa-aus/',
+		text: 'UK sellers'
 	},
 	{ 
 		url: 'page-2',
-		text: 'Click here EU, USA, AUS Sellers'
+		text: 'EU sellers'
 	}]
 %}
-{% set TwoModuleImageLeft = 'phone-call-headset.jpg' %}
-{% set TwoModuleImageAltLeft = 'always here to help' %}
-
-{% set TwoModuleHeaderRight = 'HallX is an all-in-one premium fulfillment and customer service solution for ecommerce, we take care of the day-to-day so you can focus on what matters most.' %}
-{% set TwoModuleTextRight = "We treat our customers' businesses as though they are our own. Contact us today to book your free no obligation consultation with one of our directors." %}
-{% set TwoModuleLinkUrlRight = 'contact' %}
-{% set TwoModuleLinkTextRight = 'Book your free consultation' %}
 {% set TwoModuleImageRight = 'warhouse-interior.jpg' %}
 {% set TwoModuleImageAltRight = 'are warehouse ready for you' %}
 
@@ -43,7 +42,7 @@ QuotePosision: MD of Lidproject
 	{
 		image: 'phone-call.jpg',
 		imageAlt: 'alt text',
-		name: '01 - Contact Us',
+		name: 'Step 1 - Contact Us',
 		description: 'Request your free, no-obligation consultation with one of our directors using the form below. We will organise a call at a time that is convenient to you, wherever you are in the world.',
 		url: 'http://google.com',
 		linkText: 'contact us'
@@ -51,19 +50,19 @@ QuotePosision: MD of Lidproject
 	{
 		image: 'meeting.jpg',
 		imageAlt: 'alt text',
-		name: '02 - Discuss',
+		name: 'Step 2 - Discuss',
 		description: 'Tell us about the issues you have in your business, and we will give advice on how we (or our trusted partners) can help you to solve all your operational woes.'
 	},
 	{
 		image: 'paperwork.jpg',
 		imageAlt: 'alt text',
-		name: '03 - Quote',
+		name: 'Step 3 - Quote',
 		description: 'We provide a menu-based pricing structure tailored to your business. We charge a fee to cover our setup costs, a monthly basic that includes most of the services we mutually agree you will need, and everything else is pay-as-you-go (because we don’t believe in charging for services you don’t use).'
 	},
 	{
 		image: 'computer-type.jpg',
 		imageAlt: 'alt text',
-		name: '04 - Setup',
+		name: 'Step 4 - Setup',
 		description: 'We work closely with you to integrate your new HallX services into your existing systems, together we craft a completely consistent, beautifully bespoke customer experience that your customers will want to keep coming back to. Don’t worry about downtime, we also provide complementary rapid-roll-out interim solutions so your services can continue uninterrupted while we work on crafting your dream customer experience.'
 	}] 
 %}
