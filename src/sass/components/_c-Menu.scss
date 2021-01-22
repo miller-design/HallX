@@ -55,7 +55,7 @@
 	@include scale-property(margin-right, 20px, 40px);
 
 	@include media("<small") {
-		top: 10px;
+		top: -3px;
 	}
 
 	@media (hover: hover) {
