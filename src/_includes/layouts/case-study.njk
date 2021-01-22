@@ -17,8 +17,10 @@ layout: layouts/base.njk
         <p class="[ l-CaseStudy__results-header ]">Results</p>
         {%- for item in resultArray -%}
           <p class="[ l-CaseStudy__results-text ]"><span>{{ item }}</span></p>
-       {% endfor %}
-          <a href="#" class="[ l-CaseStudy__results-link ]" download="w3logo">Download Case Study</a>
+        {% endfor %}
+        {%- if DownloadLink -%}
+          <a href="/downloads/{{ DownloadLink }}" class="[ l-CaseStudy__results-link ]" download="w3logo">Download Case Study</a>
+        {% endif %}
       </div>
     </div>
 
