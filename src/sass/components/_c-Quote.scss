@@ -24,7 +24,7 @@
 	}
 
 	@include media(">=large") {
-		@include col-width(2, 8);
+		@include col-width(2, 11);
 	}
 }
 
