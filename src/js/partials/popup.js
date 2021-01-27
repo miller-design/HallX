@@ -1,8 +1,10 @@
 const PopUp = document.querySelector('.js-popup')
 const footerEl = document.querySelector('footer')
 const popUpCloseTrigger = document.querySelector('.js-popup-close')
+const contactPage = document.querySelector('.contact-page')
 
-if(PopUp != null) {
+
+if(PopUp != null && !contactPage) {
 
 	window.addEventListener("scroll", () => {
 
