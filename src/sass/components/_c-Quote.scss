@@ -39,3 +39,26 @@
 
 	@include roboto-bold-22-16;
 }
+
+.c-Quote--small {
+
+	.c-Quote__text {
+		@include roboto-bold-35-18;
+	}
+
+	.c-Quote__by-text {
+
+		font-size: 16px;
+	}
+}
+
+.c-Quote--case-study {
+
+	@include scale-property(padding-top, 40px, 80px);
+
+	.c-Quote__inner {
+		display: flex;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

@@ -25,12 +25,12 @@
 	}
 
 	@include media(">=small") {
-		max-width: 500px;
+		max-width: 420px;
 		right: 25px;
 	}
 
 	@include media(">=medium") {
-		max-width: 450px;
+		max-width: 380px;
 	}
 
 	&.is-active {
