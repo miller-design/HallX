@@ -157,7 +157,7 @@ $resolution-range-top: map-get($breakpoints, xxlarge);
 		content: "";
 		position: absolute;
 		left: 0;
-		bottom: -3px;
+		bottom: -1px;
 		width: 100%;
 		height: 2px;
 		background-color: $c-blue;
